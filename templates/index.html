@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WhatsApp Link Generator</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-family: Arial, sans-serif;
+      }
+
+      .container {
+        text-align: center;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      textarea {
+        font-weight: bold;
+      }
+
+      input[type="submit"] {
+        padding: 10px 20px;
+        font-size: 16px;
+      }
+
+      h2 {
+        font-size: 24px;
+      }
+
+      a {
+        word-break: break-all;
+      }
+
+      .top-input {
+        margin-bottom: 20px;
+      }
+
+      .tooltip {
+        position: relative;
+        display: inline-block;
+      }
+
+      .tooltip .tooltip-text {
+        visibility: hidden;
+        width: 160px;
+        background-color: #000;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px;
+        position: absolute;
+        z-index: 1;
+        bottom: 125%;
+        left: 50%;
+        margin-left: -80px;
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+
+      .tooltip:hover .tooltip-text {
+        visibility: visible;
+        opacity: 1;
+      }
+
+      .url-and-qr {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+      }
+
+      .url, .qr-code {
+        margin: 10px;
+        text-align: center;
+      }
+
+      .url a {
+        display: block;
+        word-break: break-all;
+      }
+
+      .qr-code img {
+        width: 200px;
+        height: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>WhatsApp Link Generator</h1>
+      <form method="POST">
+        <div class="top-input">
+          <label for="phone_number">Phone Number:</label><br>
+          <div class="tooltip">
+            <input type="text" id="phone_number" name="phone_number" placeholder="Phone Number" required>
+            <span class="tooltip-text">Phone that receives the message below</span>
+          </div>
+        </div>
+        <label for="message">Enter your message:</label><br>
+        <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+        <input type="submit" value="Generate Link">
+      </form>
+      {% if whatsapp_link %}
+        <h2>Generated WhatsApp Link:</h2>
+        <a href="{{ whatsapp_link }}" target="_blank">{{ whatsapp_link }}</a>
+        <div class="url-and-qr">
+          <div class="url">
+            <h3>Shortened URL:</h3>
+            <a href="{{ shortened_url }}" target="_blank">{{ shortened_url }}</a>
+          </div>
+          <div class="qr-code">
+            <h3>QR Code:</h3>
+            <img src="{{ url_for('static', filename='qrcode.png') }}" alt="QR Code">
+          </div>
+        </div>
+      {% endif %}
+    </div>
+  </body>
+</html>
