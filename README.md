@@ -1,5 +1,6 @@
-﻿# whatsapp-message-link-generator [ with qr-code-shortened-URL]#
+﻿# whatsapp-message-link-generator [ with qr-code-shortened-URL]#  v1.0
 
+![Web UI Screenshot](web-ui-v1/web-ui-v1.png)
 
 Deploy the Flask app:
 
