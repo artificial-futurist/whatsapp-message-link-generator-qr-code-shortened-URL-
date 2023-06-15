@@ -2,17 +2,25 @@
 
 ![Web UI Screenshot](web-ui-v1/web-ui-v1.png)
 
-Deploy the Flask app:
 
-Choose a hosting platform for deploying your Flask app. Some popular options include Heroku, PythonAnywhere, or AWS.
-Follow the documentation or tutorials provided by the hosting platform to create an account and set up your app.
-Configure your deployment settings, such as specifying the Python version and dependencies.
-Set up the repository on the hosting platform:
 
-Connect the hosting platform to your GitHub repository. This will allow the platform to automatically deploy your app whenever changes are pushed to the repository.
-Configure the deployment settings on the hosting platform, such as specifying the main entry point for your Flask app (typically app.py).
-Deploy your app using the hosting platform's deployment tools.
-Access the deployed app:
+#To run the WhatsApp Message Link Generator with QR Code and Shortened URL locally in your web browser, follow these steps:#
 
-Once the app is deployed, the hosting platform will provide you with a URL where your app is accessible.
-Visit the provided URL in a web browser to access the deployed app.
+
+Open a terminal 
+Clone the GitHub repository to your local machine. 
+Run the following command:
+git clone https://github.com/artificial-futurist/whatsapp-message-link-generator-qr-code-shortened-URL-.git
+
+Navigate to the project directory:
+cd whatsapp-message-link-generator-qr-code-shortened-URL-
+
+Run the Flask app:
+app.py
+The Flask app will start running on a local development server.
+You should see an output similar to the following:
+* Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+
+Open your web browser and enter the following URL: http://127.0.0.1:5000/
+
+Now you can use the WhatsApp Message Link Generator locally in your web browser.
