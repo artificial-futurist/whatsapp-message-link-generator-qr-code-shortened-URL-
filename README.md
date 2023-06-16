@@ -15,8 +15,10 @@ git clone https://github.com/artificial-futurist/whatsapp-message-link-generator
 Navigate to the project directory:
 cd whatsapp-message-link-generator-qr-code-shortened-URL-
 
-Run the Flask app:
-app.py
+on terminal, inside directory
+run the command to start the python:
+python app.py
+
 The Flask app will start running on a local development server.
 You should see an output similar to the following:
 * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
